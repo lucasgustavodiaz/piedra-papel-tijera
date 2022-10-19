@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Piedra papel y tijera</title>
+</head>
+
+<body>
+  <section class="game">
+    <div class="score">
+      <div class="player-score">
+        <h2>Jugador</h2>
+        <p>0</p>
+      </div>
+      <div class="computer-score">
+        <h2>Bot</h2>
+        <p>0</p>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>Piedra papel y tijera</h1>
+      <button>Jugar</button>
+    </div>
+
+    <div class="match fadeOut">
+      <h2 class="winner">Elegi una opción</h2>
+      <div class="hands">
+        <img class="player-hand" src="./assets/piedra.png" alt="" />
+        <img class="computer-hand" src="./assets/piedra.png" alt="" />
+      </div>
+      <div class="options">
+        <button id="piedra">✊</button>
+        <button id="papel">✋</button>
+        <button id="tijera">✌</button>
+      </div>
+      <div class="reset fadeOut">
+        <h2 class="final-score">Pepito es el ganador!!!</h2>
+        <button>Volver a jugar</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
