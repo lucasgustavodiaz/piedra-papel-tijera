@@ -50,6 +50,11 @@ section {
   background: rgb(45, 117, 96);
   border-radius: 3px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgb(43, 155, 122);
 }
 
 .options button {
