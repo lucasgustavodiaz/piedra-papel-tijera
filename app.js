@@ -3,6 +3,15 @@ const game = () => {
   let cScore = 0
   const endScore = 2
 
+  const playerHand = document.querySelector('.player-hand')
+  const computerHand = document.querySelector('.computer-hand')
+  const hands = document.querySelector('.hands')
+  const winner = document.querySelector('.winner')
+  const options = document.querySelector('.options')
+  const reset = document.querySelector('.reset')
+  const resetBtn = document.querySelector('.reset button')
+  const finalScore = document.querySelector('.final-score')
+
   //Pantalla inicio del juego
   const startGame = () => {
     const playBtn = document.querySelector('.intro button')
@@ -20,10 +29,7 @@ const game = () => {
   //Partida
   const playMatch = () => {
     const options = document.querySelectorAll('.options button')
-    const playerHand = document.querySelector('.player-hand')
-    const computerHand = document.querySelector('.computer-hand')
     const hands = document.querySelectorAll('.hands img')
-    const winner = document.querySelector('.winner')
 
     hands.forEach(hand => {
       hand.addEventListener('animationend', function () {
@@ -74,20 +80,12 @@ const game = () => {
   }
 
   const endGame = () => {
-    const hands = document.querySelector('.hands')
-    const options = document.querySelector('.options')
-    const reset = document.querySelector('.reset')
-    const resetBtn = document.querySelector('.reset button')
-    const finalScore = document.querySelector('.final-score')
-    const winner = document.querySelector('.winner')
-
     winner.textContent = 'FIN DEL JUEGO'
     {
       pScore == endScore
         ? (finalScore.textContent = 'Jugardor es el ganador!!!')
         : (finalScore.textContent = 'Bot es el ganador!!!')
     }
-
     hands.classList.remove('fadeIn')
     hands.classList.add('fadeOut')
     options.classList.remove('fadeIn')
@@ -97,8 +95,6 @@ const game = () => {
 
     // Reseteo de juego
     resetBtn.addEventListener('click', function () {
-      const playerHand = document.querySelector('.player-hand')
-      const computerHand = document.querySelector('.computer-hand')
       pScore = 0
       cScore = 0
       updateScore()
@@ -122,8 +118,6 @@ const game = () => {
   }
 
   const compareHands = (playerChoice, computerChoice) => {
-    //Selecciono el texto para actualizar
-    const winner = document.querySelector('.winner')
     //Comprobar el empate
     if (playerChoice === computerChoice) {
       winner.textContent = 'Empate'
