@@ -10,6 +10,7 @@ const game = () => {
     const match = document.querySelector('.match')
 
     playBtn.addEventListener('click', () => {
+      match.style.visibility = 'visible'
       introScreen.classList.add('fadeOut')
       match.classList.add('fadeIn')
       match.classList.remove('fadeOut')
