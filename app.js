@@ -97,9 +97,13 @@ const game = () => {
 
     // Reseteo de juego
     resetBtn.addEventListener('click', function () {
+      const playerHand = document.querySelector('.player-hand')
+      const computerHand = document.querySelector('.computer-hand')
       pScore = 0
       cScore = 0
       updateScore()
+      playerHand.src = './assets/piedra.png'
+      computerHand.src = './assets/piedra.png'
       winner.textContent = 'Elija una opción'
       hands.classList.remove('fadeOut')
       hands.classList.add('fadeIn')
