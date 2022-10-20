@@ -20,6 +20,9 @@ const game = () => {
 
     playBtn.addEventListener('click', () => {
       match.style.visibility = 'visible'
+      hands.style.visibility = 'visible'
+      options.style.visibility = 'visible'
+      reset.style.visibility = 'visible'
       introScreen.classList.add('fadeOut')
       match.classList.add('fadeIn')
       match.classList.remove('fadeOut')
